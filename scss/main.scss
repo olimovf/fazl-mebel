@@ -19,9 +19,9 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 75rem;
     width: 100%;
-    padding: 0 15px;
+    padding: 0 1rem;
     margin: 0 auto;
     display: flex;
 }
@@ -536,12 +536,6 @@ img {
     &__tabs {
         display: flex;
         margin-right: 1rem;
-        overflow-x: scroll;
-        overflow-y: hidden;
-
-        &::-webkit-scrollbar {
-            height: 0;
-        }
 
         &-item {
             cursor: pointer;
@@ -661,24 +655,22 @@ img {
         flex-wrap: wrap;
     }
 
-    .about {
-        &__content {
-            margin-left: 0;
-            margin-right: 2rem;
-            max-width: calc(100% - 35rem);
-        }
+    .about__content {
+        margin-left: 0;
+        margin-right: 2rem;
+        max-width: calc(100% - 35rem);
+    }
 
-        &__form-title span,
-        .section-subtitle span {
-            color: #987452;
-            font-weight: 700;
-            border-radius: .5rem;
-        }
+    .about__form-title>span,
+    .section-subtitle>span {
+        color: #987452;
+        font-weight: 700;
+        border-radius: .5rem;
+    }
 
-        .section-subtitle span {
-            padding: .25rem;
-            border: 1px dashed #987452;
-        }
+    .section-subtitle>span {
+        padding: .25rem;
+        border: 1px dashed #987452;
     }
 
     &__picture {
@@ -813,10 +805,16 @@ img {
         border-radius: .5rem;
         padding: 1rem;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
         padding: 1rem;
+        text-align: center;
+
+        .section-title,
+        .section-subtitle {
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -825,9 +823,10 @@ img {
 .testimonials {
     background-color: #FFF8F2;
 
-    .container {
+    &>.container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         flex-direction: column;
-        padding: 2rem 0;
     }
 
     .section-title {
@@ -838,7 +837,6 @@ img {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: .5rem 0;
     }
 
     &__item {
@@ -846,6 +844,7 @@ img {
         border-radius: .5rem;
         padding: 1rem;
         background-color: #fff;
+        margin: .5rem 0;
 
         &:first-child {
             margin-right: 1rem;
@@ -897,19 +896,20 @@ img {
     }
 
     &__form {
-        padding: 2rem 0 1rem 0;
         background-color: #F4CFAF;
 
         .container {
+            padding: 2rem 1rem 1rem;
             align-items: center;
             justify-content: space-between;
-            flex-direction: row;
+            flex-wrap: wrap;
         }
 
         &-item {
             position: relative;
             display: flex;
             flex-direction: column;
+            margin: 1rem 0;
         }
 
         &-txt {
@@ -921,9 +921,6 @@ img {
             position: absolute;
             top: -1.8rem;
             left: 0;
-        }
-
-        &-label {
             color: #523D2B;
             margin-bottom: .8rem;
         }
@@ -1090,6 +1087,10 @@ img {
     }
 
     .size {
+        .about__content {
+            margin-right: 0;
+        }
+
         &__picture {
             order: -1;
             margin: auto;
@@ -1181,10 +1182,32 @@ img {
 
         &__head {
             overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                height: 0;
+            }
         }
 
         &__tabs {
             width: 45rem;
+        }
+    }
+
+    .testimonials {
+        &__list {
+            flex-direction: column;
+        }
+
+        &__item {
+            &:first-child {
+                margin-right: 0;
+            }
+        }
+
+        &__form {
+            &-item:first-child p {
+                font-size: 1rem;
+            }
         }
     }
 }
@@ -1219,8 +1242,21 @@ img {
                 font-size: 1rem;
             }
         }
+
         &__picture {
             height: auto;
+        }
+    }
+
+    .works {
+        &__gallery {
+            grid-template-areas:
+                'item1 item2'
+                'item3 item4'
+                'item5 item5'
+                'item6 item6'
+                'item7 item7'
+                'item8 item9';
         }
     }
 }
@@ -1261,6 +1297,26 @@ img {
     .header {
         &__picture-imgBx {
             height: 100%;
+        }
+    }
+
+    .testimonials {
+        &__form {
+            .container {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 1rem;
+            }
+
+            &-item,
+            &-label {
+                position: static;
+                margin: .5rem 0;
+            }
+
+            &-label {
+                margin-top: 0;
+            }
         }
     }
 }
