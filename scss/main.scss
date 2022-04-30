@@ -93,6 +93,12 @@ img {
     &:focus {
         border-color: #987452;
     }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 }
 
 
@@ -421,7 +427,7 @@ img {
 
         .play-btn {
             position: absolute;
-            left: 50%;
+            left: calc(50% + 1.1rem);
             top: 50%;
             color: #fff;
             width: 4.8rem;
@@ -1032,7 +1038,7 @@ img {
         align-items: center;
         flex-wrap: wrap;
 
-        & > div {
+        &>div {
             margin: .5rem 0;
         }
     }
@@ -1112,7 +1118,7 @@ img {
         &__map {
             align-self: center;
             padding: 0 1rem;
-            margin: 1rem 0; 
+            margin: 1rem 0;
         }
     }
 }
@@ -1170,11 +1176,16 @@ img {
         }
     }
 
-    .about, .gallery, .works, .size, .brend {
+    .about,
+    .gallery,
+    .works,
+    .size,
+    .brends {
         padding: 2rem 0;
     }
 
     .about {
+
         .section-title,
         .section-subtitle {
             margin-bottom: 1rem;
@@ -1256,9 +1267,15 @@ img {
 }
 
 @media (max-width: 576px) {
-    .about, .gallery, .works, .size, .brend {
+
+    .about,
+    .gallery,
+    .works,
+    .size,
+    .brends {
         padding: 1rem 0;
     }
+
     .about {
         &__video {
             max-width: 100%;
@@ -1330,8 +1347,21 @@ img {
         .container {
             padding: 1rem;
         }
+
         .section-title {
             margin-bottom: 1rem;
+        }
+    }
+
+    .brends {
+
+        .section-title,
+        .section-subtitle {
+            margin-bottom: 1rem;
+        }
+
+        .container:nth-child(2) {
+            margin: 2rem 0;
         }
     }
 }
