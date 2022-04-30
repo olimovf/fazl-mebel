@@ -369,7 +369,7 @@ img {
 
 // ===================== ABOUT ====================== //
 .about {
-    padding: 4rem 0;
+    padding: 3rem 0 4rem;
 
     .container {
         align-items: center;
@@ -381,6 +381,7 @@ img {
         position: relative;
         width: 100%;
         height: 22rem;
+        padding-left: 2.2rem;
 
         video {
             width: 100%;
@@ -394,8 +395,8 @@ img {
             position: absolute;
             width: 75%;
             height: 98%;
-            left: -5%;
-            top: 10%;
+            left: 0;
+            top: 2.2rem;
             border-radius: .5rem;
             border: 3px solid #A49384;
             z-index: -1;
@@ -409,7 +410,7 @@ img {
             padding: 0 0.5rem;
             color: #AAA7A4;
             position: absolute;
-            bottom: -9.5%;
+            bottom: -2.2rem;
             z-index: 5;
             overflow: hidden;
 
@@ -503,7 +504,7 @@ img {
 
 // ===================== GALLERY ====================== //
 .gallery {
-    padding: 4rem 0;
+    padding: 3rem 0;
 
     .container {
         align-items: center;
@@ -648,8 +649,7 @@ img {
 
 // ===================== SIZE ====================== //
 .size {
-    padding: 0;
-    padding-bottom: 2rem;
+    padding: 3rem 0;
 
     .container {
         flex-wrap: wrap;
@@ -677,6 +677,7 @@ img {
         height: 24rem;
         align-self: flex-start;
         position: relative;
+        padding-right: 2rem;
 
         img {
             width: 100%;
@@ -688,8 +689,8 @@ img {
             position: absolute;
             width: 85%;
             height: 100%;
-            right: -7%;
-            top: 10%;
+            right: 0;
+            top: 2rem;
             border-radius: .5rem;
             border: 3px solid #A49384;
             z-index: -1;
@@ -733,7 +734,7 @@ img {
 
 // ===================== WORKS ====================== //
 .works {
-    padding: 4rem 0;
+    padding: 3rem 0;
 
     &__gallery {
         display: grid;
@@ -930,66 +931,51 @@ img {
 
 // ===================== BRENDS ====================== //
 .brends {
-    padding: 2rem 0;
+    padding: 3rem 0 2rem;
 
     .container:first-child {
         flex-direction: column;
     }
 
-    .section-title {
-        margin: 1rem 0;
+    &__list {
+        position: relative;
     }
 
-    .splide {
-        overflow: hidden;
-        width: 100%;
-        height: 12.6rem;
-        position: relative;
+    .swiper {
+        width: calc(100% - 2.2rem);
+        height: 100%;
 
-        &__arrow {
+        &-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &-button {
+            background-color: #987452;
             width: 2.2rem;
             height: 2.2rem;
             border-radius: 50%;
-            background-color: #987452;
-            display: grid;
-            place-items: center;
+            transition: background-color .3s ease-in;
 
-            &:first-child svg {
-                transform: rotate(180deg);
+            &::after {
+                font-size: 1rem;
+                color: #fff;
             }
 
-            svg {
-                width: 1rem;
-                height: 1rem;
-                fill: #fff;
+            &:hover {
+                background-color: #DCBFA4;
             }
 
-            &--prev,
-            &--next {
-                top: 50%;
-                z-index: 5;
-                position: absolute;
-                transform: translateY(-50%);
-            }
-
-            &--prev {
+            &-prev {
                 left: 0;
             }
 
-            &--next {
+            &-next {
                 right: 0;
             }
         }
-    }
-
-    &__list {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &__item {
-        margin: .5rem;
     }
 
     .container:nth-child(2) {
@@ -1008,12 +994,30 @@ img {
     }
 
     &__map {
+        position: relative;
+        padding-right: 2rem;
+        max-width: 40rem;
+        width: 100%;
+        height: 20rem;
+
         iframe {
             border-radius: .5rem;
+            border: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-            .place-card {
-                display: none !important;
-            }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 85%;
+            height: 100%;
+            right: 0;
+            top: 1rem;
+            border-radius: 0.5rem;
+            border: 3px solid #A49384;
+            z-index: -1;
         }
     }
 }
@@ -1026,20 +1030,22 @@ img {
     .container {
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+
+        & > div {
+            margin: .5rem 0;
+        }
     }
 
     .navbar__left {
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .navbar__address {
-        width: 30%;
+        width: auto;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     &__copy {
+        order: 1;
         width: 100%;
-        margin: 1rem auto;
 
         a {
             text-decoration: underline;
@@ -1097,6 +1103,18 @@ img {
             max-width: 80%;
         }
     }
+
+    .brends {
+        .container:nth-child(2) {
+            flex-direction: column;
+        }
+
+        &__map {
+            align-self: center;
+            padding: 0 1rem;
+            margin: 1rem 0; 
+        }
+    }
 }
 
 @media (max-width: 780px) {
@@ -1152,9 +1170,11 @@ img {
         }
     }
 
-    .about {
-        padding: 1rem 0;
+    .about, .gallery, .works, .size, .brend {
+        padding: 2rem 0;
+    }
 
+    .about {
         .section-title,
         .section-subtitle {
             margin-bottom: 1rem;
@@ -1178,8 +1198,6 @@ img {
     }
 
     .gallery {
-        padding: 1rem 0;
-
         &__head {
             overflow-y: scroll;
 
@@ -1210,9 +1228,52 @@ img {
             }
         }
     }
+
+    .brends {
+        .swiper {
+            width: calc(100% - 1.7rem);
+
+            &-button {
+                width: 1.7rem;
+                height: 1.7rem;
+
+                &::after {
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        &__map {
+            height: 15rem;
+        }
+    }
+
+    .footer {
+        &__copy {
+            text-align: center;
+        }
+    }
 }
 
 @media (max-width: 576px) {
+    .about, .gallery, .works, .size, .brend {
+        padding: 1rem 0;
+    }
+    .about {
+        &__video {
+            max-width: 100%;
+            padding-left: 1rem;
+
+            &-line {
+                top: 1.5rem;
+            }
+
+            &-label {
+                bottom: -1.5rem;
+            }
+        }
+    }
+
     .gallery {
         &__tabs {
             &-content {
@@ -1245,6 +1306,11 @@ img {
 
         &__picture {
             height: auto;
+            padding-right: 1rem;
+
+            &-line {
+                top: 1rem;
+            }
         }
     }
 
@@ -1257,6 +1323,15 @@ img {
                 'item6 item6'
                 'item7 item7'
                 'item8 item9';
+        }
+    }
+
+    .testimonials {
+        .container {
+            padding: 1rem;
+        }
+        .section-title {
+            margin-bottom: 1rem;
         }
     }
 }

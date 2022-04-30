@@ -1,18 +1,14 @@
 const video = document.querySelector('.about__video video');
 const playBtn = document.querySelector('.play-btn');
 
-let isPlay = false;
-
 video.addEventListener('click', playVideo);
 
 function playVideo() {
-    if (!isPlay) {
-        isPlay = true;
+    if (video.paused) {
         video.play();
         playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
         playBtn.classList.add('anim');
     } else {
-        isPlay = false;
         video.pause();
         playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
         playBtn.classList.remove('anim');
@@ -35,10 +31,22 @@ tabs.forEach((tab, tabIndex) => {
     });
 });
 
-new Splide('.splide', {
-    type: 'loop',
-    perPage: 3,
-    perMove: 1,
-    focus: 'center',
-    arrows: true,
-}).mount();
+const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 2,
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        576: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      },
+});
