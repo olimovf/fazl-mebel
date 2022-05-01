@@ -93,6 +93,33 @@ img {
   margin: 0;
 }
 
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 999;
+  box-shadow: 0px 50px 100px #A8876888;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  padding: 1.2rem;
+  max-width: 20rem;
+  width: 100%;
+  transition: transform 0.15s ease-in;
+}
+.modal__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+.modal .input {
+  width: 100%;
+}
+.modal.show {
+  transform: translate(-50%, -50%) scale(1);
+}
+
 .navbar {
   padding: 1rem 0;
 }
@@ -403,12 +430,12 @@ img {
 }
 .about__form {
   font-family: "Montserrat", sans-serif;
-  font-family: 600;
 }
 .about__form-title {
   color: #231202;
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 .about__form-label {
   color: #746F6B;

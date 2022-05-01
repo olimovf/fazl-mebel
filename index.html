@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fazl mebel</title>
+    <link rel="icon" href="./img/union.png">
     <!-- FONTAWESOME CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -33,7 +34,7 @@
                 </select>
                 <div class="navbar__address">
                     <i class="fas fa-map-marker-alt"></i>
-                    <p>Andijon shaxar, <br> boychechak 4</p>
+                    <p>Andijon shahar, <br> boychechak 4</p>
                 </div>
             </div>
             <div class="navbar__right">
@@ -146,7 +147,8 @@
                 <form class="about__form">
                     <h4 class="about__form-title">Bepul konsultatsiyadan o'ting</h4>
                     <label class="about__form-label" for="about-tel">Telefon raqami</label>
-                    <input class="about__form-input input" type="tel" id="about-tel" value="+998">
+                    <input class="about__form-input input" type="text" id="about-tel" placeholder="+998 00 000 00 00"
+                        data-tel>
                     <button class="btn" type="button">Yuborish</button>
                 </form>
             </div>
@@ -285,11 +287,12 @@
                     materialda mebel narxini chiqarib berishadi</p>
                 <form class="about__form">
                     <h4 class="about__form-title">Mutaxassis orqali sizga kerakli mebel narxini <span>BEPUL</span>
-                        xisoblash uchun telefon raqamingizni qoldiring</h4>
+                        hisoblash uchun telefon raqamingizni qoldiring</h4>
                     <label class="about__form-label" for="size-name">Ism</label>
-                    <input class="about__form-input input" type="text" id="size-name" placeholder="(Fakhriyor)">
+                    <input class="about__form-input input" type="text" id="size-name" placeholder="Faxriyor">
                     <label class="about__form-label" for="size-tel">Telefon raqami</label>
-                    <input class="about__form-input input" type="tel" id="size-tel" value="+998">
+                    <input class="about__form-input input" type="text" id="size-tel" placeholder="+998 00 000 00 00"
+                        data-tel>
                     <button type="submit" class="btn">Yuborish</button>
                 </form>
             </div>
@@ -326,7 +329,7 @@
                     </div>
                     <div class="header__advantages-content">
                         <h3 class="header__advantages-title">Sifatli materiallardan foydalanish</h3>
-                        <p class="header__advantages-subtitle">Bizga miqdordan ko'ra, sifat muhiroqdir!</p>
+                        <p class="header__advantages-subtitle">Bizga miqdordan ko'ra, sifat muhimroqdir!</p>
                     </div>
                 </div>
                 <div class="header__advantages-item">
@@ -335,7 +338,7 @@
                     </div>
                     <div class="header__advantages-content">
                         <h3 class="header__advantages-title">Mijozga o'zgacha yondashuv</h3>
-                        <p class="header__advantages-subtitle">Biz doimo Xar bir mijozga o'zgacha yondashamiz!</p>
+                        <p class="header__advantages-subtitle">Biz doimo har bir mijozga o'zgacha yondashamiz!</p>
                     </div>
                 </div>
                 <div class="header__advantages-item">
@@ -344,8 +347,8 @@
                     </div>
                     <div class="header__advantages-content">
                         <h3 class="header__advantages-title">Mebelni professional darajada yeg'ish</h3>
-                        <p class="header__advantages-subtitle">Biz xar bir mebelni millimetrigacha xisoblab,
-                            professional darajada yeg'ib ketamiz!</p>
+                        <p class="header__advantages-subtitle">Biz har bir mebelni millimetrigacha hisoblab,
+                            professional darajada yig'ib ketamiz!</p>
                     </div>
                 </div>
             </div>
@@ -404,7 +407,7 @@
                         <div class="testimonials__item-content">
                             <h4 class="testimonials__item-title">Ajoyib mebel do'koni</h4>
                             <div class="testimonials__item-subtitle">
-                                <span>Eshonov Fakhriyor</span>
+                                <span>Eshonov Faxriyor</span>
                                 <span>Mebel</span>
                             </div>
                         </div>
@@ -428,7 +431,7 @@
                         <div class="testimonials__item-content">
                             <h4 class="testimonials__item-title">Ajoyib mebel do'koni</h4>
                             <div class="testimonials__item-subtitle">
-                                <span>Eshonov Fakhriyor</span>
+                                <span>Eshonov Faxriyor</span>
                                 <span>Mebel</span>
                             </div>
                         </div>
@@ -452,7 +455,7 @@
                         <div class="testimonials__item-content">
                             <h4 class="testimonials__item-title">Ajoyib mebel do'koni</h4>
                             <div class="testimonials__item-subtitle">
-                                <span>Eshonov Fakhriyor</span>
+                                <span>Eshonov Faxriyor</span>
                                 <span>Mebel</span>
                             </div>
                         </div>
@@ -474,7 +477,7 @@
                         <div class="testimonials__item-content">
                             <h4 class="testimonials__item-title">Ajoyib mebel do'koni</h4>
                             <div class="testimonials__item-subtitle">
-                                <span>Eshonov Fakhriyor</span>
+                                <span>Eshonov Faxriyor</span>
                                 <span>Mebel</span>
                             </div>
                         </div>
@@ -500,11 +503,12 @@
                 <div class="testimonials__form-item">
                     <label class="testimonials__form-label" for="testimonials-name">Ism</label>
                     <input class="testimonials__form-input input" type="text" id="testimonials-name"
-                        placeholder="(Fakhriyor)">
+                        placeholder="Faxriyor">
                 </div>
                 <div class="testimonials__form-item">
                     <label class="testimonials__form-label" for="testimonials-tel">Telefon raqami</label>
-                    <input class="testimonials__form-input input" type="tel" id="testimonials-tel" value="+998">
+                    <input class="testimonials__form-input input" type="text" id="testimonials-tel"
+                        placeholder="+998 00 000 00 00" data-tel>
                 </div>
                 <div class="testimonials__form-item">
                     <button type="submit" class="btn">Yuborish</button>
@@ -546,9 +550,10 @@
                     topamiz!</p>
                 <form class="brends__form">
                     <label class="about__form-label" for="brends-name">Ism</label>
-                    <input class="about__form-input input" type="text" id="brends-name" placeholder="(Fakhriyor)">
+                    <input class="about__form-input input" type="text" id="brends-name" placeholder="Faxriyor">
                     <label class="about__form-label" for="brends-tel">Telefon raqami</label>
-                    <input class="about__form-input input" type="tel" id="brends-tel" value="+998">
+                    <input class="about__form-input input" type="text" id="brends-tel" placeholder="+998 00 000 00 00"
+                        data-tel>
                     <button class="btn" type="submit">Yuborish</button>
                 </form>
             </div>
@@ -576,7 +581,7 @@
             </div>
             <div class="navbar__address">
                 <i class="fas fa-map-marker-alt"></i>
-                <p>Andijon shaxar, <br> boychechak 4</p>
+                <p>Andijon shahar, <br> boychechak 4</p>
             </div>
             <div class="navbar__right-item">
                 <p class="navbar__time-hours">09:00 - 20:00</p>
@@ -596,10 +601,24 @@
     </footer>
     <!-- /footer -->
 
+    <!-- modal -->
+    <div class="modal">
+        <h2 class="modal__title">Buyurtma berish</h2>
+        <form class="brends__form">
+            <label class="about__form-label" for="modal-name">Ismingiz</label>
+            <input class="about__form-input input" type="text" id="modal-name" placeholder="Faxriyor">
+            <label class="about__form-label" for="modal-tel">Telefon raqamingiz</label>
+            <input class="about__form-input input" type="text" id="modal-tel" placeholder="+998 00 000 00 00" data-tel>
+            <button class="btn" type="submit">Yuborish</button>
+        </form>
+    </div>
+
     <!-- SWIPER JS -->
     <script src="./js/swiper-bundle.min.js"></script>
     <!-- FANCYBOX JS -->
     <script src="./js/fancybox.umd.js"></script>
+    <!-- IMASK JS -->
+    <script src="./js/imask.min.js"></script>
     <!-- JavaScript -->
     <script src="./js/index.js"></script>
 </body>
