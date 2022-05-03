@@ -101,18 +101,31 @@ img {
     }
 }
 
+.overlay {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(1px);
+    background-color: rgba($color: #000, $alpha: .4);
+    display: none;
+}
+
 .modal {
-    position: absolute;
+    position: fixed;
+    z-index: 999;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    z-index: 999;
-    box-shadow: 0px 50px 100px #A8876888;
-    border-radius: .5rem;
-    background-color: #fff;
     padding: 1.2rem;
     max-width: 20rem;
     width: 100%;
+    border-radius: .5rem;
+    background-color: #fff;
+    box-shadow: 0px 50px 100px #A8876888;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .1s ease;
 
     &__title {
         font-family: "Montserrat", sans-serif;
@@ -124,8 +137,6 @@ img {
     .input {
         width: 100%;
     }
-
-    transition: transform .15s ease-in;
 
     &.show {
         transform: translate(-50%, -50%) scale(1);
@@ -684,7 +695,7 @@ img {
 
 
 // ===================== SIZE ====================== //
-.size {
+.order {
     padding: 3rem 0;
 
     .container {
@@ -1128,7 +1139,7 @@ img {
         }
     }
 
-    .size {
+    .order {
         .about__content {
             margin-right: 0;
         }
@@ -1209,7 +1220,7 @@ img {
     .about,
     .gallery,
     .works,
-    .size,
+    .order,
     .brends {
         padding: 2rem 0;
     }
@@ -1301,7 +1312,7 @@ img {
     .about,
     .gallery,
     .works,
-    .size,
+    .order,
     .brends {
         padding: 1rem 0;
     }
@@ -1344,7 +1355,7 @@ img {
         }
     }
 
-    .size {
+    .order {
         .about {
             &__form-title {
                 font-size: 1rem;

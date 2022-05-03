@@ -67,7 +67,7 @@
                     repellat, accusantium, dignissimos architecto dolorem quibusdam sint corporis, inventore perferendis
                     labore
                 </p>
-                <button class="btn" type="button">Buyurtma berish</button>
+                <a class="btn" href="#order-form">Buyurtma berish</a>
                 <div class="header__numbers">
                     <div class="header__numbers-item">
                         <h2>250+</h2>
@@ -277,28 +277,28 @@
     </section>
     <!-- /gallery -->
 
-    <!-- size -->
-    <section class="about size">
+    <!-- order -->
+    <section class="about order">
         <div class="container">
             <div class="about__content">
                 <h1 class="section-title">Aynan qandaydur o'lcham bo'yicha istalgan mebelingizni yasattirmoqchimsiz?
                 </h1>
                 <p class="section-subtitle">Bizning mutaxassislar sizga <span>BEPUL</span> siz xoxlagan olchamda va
                     materialda mebel narxini chiqarib berishadi</p>
-                <form class="about__form">
+                <form class="about__form" id="order-form">
                     <h4 class="about__form-title">Mutaxassis orqali sizga kerakli mebel narxini <span>BEPUL</span>
                         hisoblash uchun telefon raqamingizni qoldiring</h4>
-                    <label class="about__form-label" for="size-name">Ism</label>
-                    <input class="about__form-input input" type="text" id="size-name" placeholder="Faxriyor">
-                    <label class="about__form-label" for="size-tel">Telefon raqami</label>
-                    <input class="about__form-input input" type="text" id="size-tel" placeholder="+998 00 000 00 00"
+                    <label class="about__form-label" for="order-name">Ism</label>
+                    <input class="about__form-input input" type="text" id="order-name" placeholder="Faxriyor">
+                    <label class="about__form-label" for="order-tel">Telefon raqami</label>
+                    <input class="about__form-input input" type="text" id="order-tel" placeholder="+998 00 000 00 00"
                         data-tel>
                     <button type="submit" class="btn">Yuborish</button>
                 </form>
             </div>
-            <div class="size__picture">
-                <img src="./img/size-img.png" alt="size-img">
-                <div class="size__picture-line"></div>
+            <div class="order__picture">
+                <img src="./img/size-img.png" alt="order-img">
+                <div class="order__picture-line"></div>
             </div>
             <div class="gallery__bottom">
                 <span>*</span>
@@ -307,7 +307,7 @@
             </div>
         </div>
     </section>
-    <!-- /size -->
+    <!-- /order -->
 
     <!-- choise -->
     <section class="choise">
@@ -603,6 +603,7 @@
 
     <!-- modal -->
     <div class="modal">
+        <!-- <div class="modal__box"> -->
         <h2 class="modal__title">Buyurtma berish</h2>
         <form class="brends__form">
             <label class="about__form-label" for="modal-name">Ismingiz</label>
@@ -611,7 +612,9 @@
             <input class="about__form-input input" type="text" id="modal-tel" placeholder="+998 00 000 00 00" data-tel>
             <button class="btn" type="submit">Yuborish</button>
         </form>
+        <!-- </div> -->
     </div>
+    <div class="overlay"></div>
 
     <!-- SWIPER JS -->
     <script src="./js/swiper-bundle.min.js"></script>

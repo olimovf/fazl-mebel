@@ -66,16 +66,46 @@ telInputs.forEach(elem => {
 
 // ========== modal ==========
 const buttons = document.querySelectorAll('button[type="button"]');
-const modalTitles = [
-    'Buyurtma berish',
-    'Bepul konsultatsiya oling!',
-    'Yuklab olish uchun formani to\'ldiring'
-];
+// const modalTitles = [
+//     'Buyurtma berish',
+//     'Bepul konsultatsiya oling!',
+//     'Yuklab olish uchun formani to\'ldiring'
+// ];
 
 const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+
 buttons.forEach(btn => {
     btn.addEventListener('click', () => {
-        // document.body.style.overflowY = 'hidden';
         modal.classList.add('show');
+        document.body.style.overflowY = 'hidden';
+        overlay.style.display = 'block';
     })
+})
+
+document.addEventListener('click', e => {
+    if (e.target.classList[0] == 'overlay') {
+        modal.classList.remove('show');
+        document.body.style.overflowY = 'auto';
+        overlay.style.display = 'none';
+    }
+})
+
+const checkInput = (event) => {
+    const errorEl = Array.from(event.target.parentNode.querySelectorAll('span'));
+
+    if (event.target.value/trim() === '' && !errorEl.length) {
+        event.target.insertAdjacentHTML('afterend', '<span class="text-danger">Required</span>');
+    }
+
+    if (errorEl && event.target.value !== '') {
+        errorEl.forEach(elem => elem.remove());
+    }
+};
+
+const inputFields = document.querySelectorAll('input');
+console.log(inputFields)
+inputFields.forEach(inp => {
+
+    inp.addEventListener('blur', checkInput);
 })
