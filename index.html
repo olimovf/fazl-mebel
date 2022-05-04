@@ -147,8 +147,8 @@
                 <form class="about__form">
                     <h4 class="about__form-title">Bepul konsultatsiyadan o'ting</h4>
                     <label class="about__form-label" for="about-tel">Telefon raqami</label>
-                    <input class="about__form-input input" type="text" id="about-tel" placeholder="+998 00 000 00 00"
-                        data-tel>
+                    <input class="about__form-input input" required type="text" id="about-tel" placeholder="+998 00 000 00 00"
+                        data-tel pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
                     <button class="btn" type="button">Yuborish</button>
                 </form>
             </div>
@@ -204,67 +204,53 @@
                 <div class="gallery__tabs-content">
                     <a data-fancybox="gallery1-1" href="./img/mebel1.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel1.png" alt="mebel1">
-                        <span>Yotoqxona uchun mebel</span>
                     </a>
                     <a data-fancybox="gallery1-1" href="./img/mebel2.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel2.png" alt="mebel2">
-                        <span>Mexmonxona uchun mebel</span>
                     </a>
                     <a data-fancybox="gallery1-1" href="./img/mebel3.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel3.png" alt="mebel3">
-                        <span>Yotoqxona uchun mebel</span>
                     </a>
                     <a data-fancybox="gallery1-1" href="./img/mebel6.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel6.png" alt="mebel6">
-                        <span>Mexmonxona uchun mebel</span>
                     </a>
                 </div>
                 <div class="gallery__tabs-content">
                     <a data-fancybox="gallery1-2" href="./img/mebel2.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel2.png" alt="mebel2">
-                        <span>Mexmonxona uchun mebel</span>
                     </a>
                     <a data-fancybox="gallery1-2" href="./img/mebel3.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel3.png" alt="mebel3">
-                        <span>Yotoqxona uchun mebel</span>
                     </a>
                     <a data-fancybox="gallery1-2" href="./img/mebel7.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel7.png" alt="mebel7">
-                        <span>Mexmonxona uchun mebel</span>
                     </a>
                     <a data-fancybox="gallery1-2" href="./img/mebel4.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel4.png" alt="mebel4">
-                        <span>Mexmonxona uchun mebel</span>
                     </a>
                 </div>
                 <div class="gallery__tabs-content">
                     <a data-fancybox="gallery1-3" href="./img/mebel3.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel3.png" alt="mebel3">
-                        <span>Yotoqxona uchun mebel</span>
                     </a>
                     <a data-fancybox="gallery1-3" href="./img/mebel5.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel5.png" alt="mebel5">
-                        <span>Yotoqxona uchun mebel</span>
                     </a>
                 </div>
                 <div class="gallery__tabs-content">
                     <a data-fancybox="gallery1-4" href="./img/mebel6.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel6.png" alt="mebel6">
-                        <span>Mexmonxona uchun mebel</span>
                     </a>
                     <a data-fancybox="gallery1-4" href="./img/mebel4.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel4.png" alt="mebel4">
-                        <span>Mexmonxona uchun mebel</span>
                     </a>
                 </div>
                 <div class="gallery__tabs-content">
                     <a data-fancybox="gallery1-5" href="./img/mebel5.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel5.png" alt="mebel5">
-                        <span>Yotoqxona uchun mebel</span>
                     </a>
                     <a data-fancybox="gallery1-5" href="./img/mebel6.png" class="gallery__tabs-imgBx">
                         <img src="./img/mebel6.png" alt="mebel6">
-                        <span>Mexmonxona uchun mebel</span>
                     </a>
                 </div>
             </div>
@@ -289,10 +275,10 @@
                     <h4 class="about__form-title">Mutaxassis orqali sizga kerakli mebel narxini <span>BEPUL</span>
                         hisoblash uchun telefon raqamingizni qoldiring</h4>
                     <label class="about__form-label" for="order-name">Ism</label>
-                    <input class="about__form-input input" type="text" id="order-name" placeholder="Faxriyor">
+                    <input class="about__form-input input" required type="text" id="order-name" placeholder="Faxriyor">
                     <label class="about__form-label" for="order-tel">Telefon raqami</label>
-                    <input class="about__form-input input" type="text" id="order-tel" placeholder="+998 00 000 00 00"
-                        data-tel>
+                    <input class="about__form-input input" required type="text" id="order-tel" placeholder="+998 00 000 00 00"
+                        data-tel pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
                     <button type="submit" class="btn">Yuborish</button>
                 </form>
             </div>
@@ -300,7 +286,7 @@
                 <img src="./img/size-img.png" alt="order-img">
                 <div class="order__picture-line"></div>
             </div>
-            <div class="gallery__bottom">
+            <div class="gallery__bottom" id="order-msg">
                 <span>*</span>
                 <p class="gallery__bottom-label">Konsultatsiya olish mutlaqo bepul bo'lib, sizdan hech qanday to'lovni
                     amalga oshirish talab qilinmaydi!</p>
@@ -508,7 +494,7 @@
                 <div class="testimonials__form-item">
                     <label class="testimonials__form-label" for="testimonials-tel">Telefon raqami</label>
                     <input class="testimonials__form-input input" type="text" id="testimonials-tel"
-                        placeholder="+998 00 000 00 00" data-tel>
+                        placeholder="+998 00 000 00 00" data-tel pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
                 </div>
                 <div class="testimonials__form-item">
                     <button type="submit" class="btn">Yuborish</button>
@@ -550,10 +536,10 @@
                     topamiz!</p>
                 <form class="brends__form">
                     <label class="about__form-label" for="brends-name">Ism</label>
-                    <input class="about__form-input input" type="text" id="brends-name" placeholder="Faxriyor">
+                    <input class="about__form-input input" required type="text" id="brends-name" placeholder="Faxriyor">
                     <label class="about__form-label" for="brends-tel">Telefon raqami</label>
-                    <input class="about__form-input input" type="text" id="brends-tel" placeholder="+998 00 000 00 00"
-                        data-tel>
+                    <input class="about__form-input input" required type="text" id="brends-tel" placeholder="+998 00 000 00 00"
+                        data-tel pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
                     <button class="btn" type="submit">Yuborish</button>
                 </form>
             </div>
@@ -607,9 +593,9 @@
         <h2 class="modal__title">Buyurtma berish</h2>
         <form class="brends__form">
             <label class="about__form-label" for="modal-name">Ismingiz</label>
-            <input class="about__form-input input" type="text" id="modal-name" placeholder="Faxriyor">
+            <input class="about__form-input input" required type="text" id="modal-name" placeholder="Faxriyor">
             <label class="about__form-label" for="modal-tel">Telefon raqamingiz</label>
-            <input class="about__form-input input" type="text" id="modal-tel" placeholder="+998 00 000 00 00" data-tel>
+            <input class="about__form-input input" required type="text" id="modal-tel" placeholder="+998 00 000 00 00" data-tel pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
             <button class="btn" type="submit">Yuborish</button>
         </form>
         <!-- </div> -->

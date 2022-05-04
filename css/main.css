@@ -92,6 +92,9 @@ img {
   -webkit-appearance: none;
   margin: 0;
 }
+.input:-webkit-autofill, .input:-webkit-autofill:hover, .input:-webkit-autofill:focus, .input:-webkit-autofill:active {
+  box-shadow: 0 0 0 2rem #fff inset;
+}
 
 .overlay {
   position: fixed;
@@ -492,7 +495,6 @@ img {
 }
 .gallery__body {
   padding: 1rem;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;

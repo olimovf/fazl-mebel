@@ -99,6 +99,13 @@ img {
         -webkit-appearance: none;
         margin: 0;
     }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        box-shadow: 0 0 0 2rem #fff inset;
+    }
 }
 
 .overlay {
@@ -571,7 +578,6 @@ img {
 
     &__body {
         padding: 1rem;
-        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;

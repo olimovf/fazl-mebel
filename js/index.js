@@ -60,9 +60,7 @@ const maskOptions = {
     mask: '+998 00 000 00 00',
     lazy: false
 };
-telInputs.forEach(elem => {
-    const mask = new IMask(elem, maskOptions);
-});
+telInputs.forEach(elem => new IMask(elem, maskOptions));
 
 // ========== modal ==========
 const buttons = document.querySelectorAll('button[type="button"]');
@@ -91,21 +89,22 @@ document.addEventListener('click', e => {
     }
 })
 
-const checkInput = (event) => {
-    const errorEl = Array.from(event.target.parentNode.querySelectorAll('span'));
-
-    if (event.target.value/trim() === '' && !errorEl.length) {
-        event.target.insertAdjacentHTML('afterend', '<span class="text-danger">Required</span>');
+// validation
+const inputs = document.querySelectorAll("INPUT");
+inputs.forEach(inp => {
+    inp.oninvalid = function(e) {
+        e.target.setCustomValidity("");
+        if (inp.attributes.getNamedItem('data-tel')) {
+            if (e.target.validity.patternMismatch) {
+                e.target.setCustomValidity("Telefon raqami to'liq kiritilishi kerak!");
+            }
+        } else {
+            if (!e.target.validity.valid) {
+                e.target.setCustomValidity("Ism kiritilishi kerak!");
+            }
+        }
     }
-
-    if (errorEl && event.target.value !== '') {
-        errorEl.forEach(elem => elem.remove());
-    }
-};
-
-const inputFields = document.querySelectorAll('input');
-console.log(inputFields)
-inputFields.forEach(inp => {
-
-    inp.addEventListener('blur', checkInput);
+    inp.oninput = function(e) {
+        e.target.setCustomValidity("");
+    };
 })
