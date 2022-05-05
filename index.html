@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="./css/aos.css">
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <!-- FANCYBOX CSS -->
@@ -23,7 +25,7 @@
     <!-- navbar -->
     <nav class="navbar">
         <div class="container">
-            <div class="navbar__left">
+            <div class="navbar__left" data-aos="fade-down-right" data-aos-duration="1500">
                 <a href="#" class="navbar__logo">
                     <img src="./img/union.png" alt="navbar-logo">
                     <p>Fazl</p>
@@ -37,7 +39,7 @@
                     <p>Andijon shahar, <br> boychechak 4</p>
                 </div>
             </div>
-            <div class="navbar__right">
+            <div class="navbar__right" data-aos="fade-down-left" data-aos-duration="1500">
                 <div class="navbar__right-item">
                     <p class="navbar__time-hours">09:00 - 20:00</p>
                     <label class="navbar__time-label">
@@ -60,7 +62,7 @@
     <!-- header -->
     <header class="header">
         <div class="container">
-            <div class="header__content">
+            <div class="header__content" data-aos="fade-up-right" data-aos-duration="1500">
                 <h1 class="section-title">Uyingiz uchun antiqa mebellar</h1>
                 <p class="section-subtitle">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsa error maxime dolorum. Tempora
@@ -83,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header__picture">
+            <div class="header__picture" data-aos="fade-up-left" data-aos-duration="1500">
                 <div class="header__picture-imgBx">
                     <img src="./img/header-img.png" alt="header-img">
                 </div>
@@ -91,7 +93,7 @@
             <div class="header__advantages">
                 <div class="header__advantages-item">
                     <div class="header__advantages-icon">
-                        <img src="./img/icon1.png" alt="icon1">
+                        <img src="./img/icons/icon1.png" alt="icon1">
                     </div>
                     <div class="header__advantages-content">
                         <h3 class="header__advantages-title">Bepul yetkazib berish</h3>
@@ -101,7 +103,7 @@
                 </div>
                 <div class="header__advantages-item">
                     <div class="header__advantages-icon">
-                        <img src="./img/icon2.png" alt="icon2">
+                        <img src="./img/icons/icon2.png" alt="icon2">
                     </div>
                     <div class="header__advantages-content">
                         <h3 class="header__advantages-title">Eng sara mebellar</h3>
@@ -111,7 +113,7 @@
                 </div>
                 <div class="header__advantages-item">
                     <div class="header__advantages-icon">
-                        <img src="./img/icon3.png" alt="icon3">
+                        <img src="./img/icons/icon3.png" alt="icon3">
                     </div>
                     <div class="header__advantages-content">
                         <h3 class="header__advantages-title">1 yil kafolat</h3>
@@ -130,8 +132,8 @@
     <!-- about -->
     <section class="about">
         <div class="container">
-            <div class="about__video">
-                <video poster="./img/poster.png" src="./videos/AI.mp4"></video>
+            <div class="about__video" data-aos="zoom-in-down" data-aos-duration="1000">
+                <video poster="./img/poster.png" src="./videos/Mebellar.mp4"></video>
                 <span class="play-btn"><i class="fa-solid fa-play"></i></span>
                 <div class="about__video-line"></div>
                 <div class="about__video-label">
@@ -139,7 +141,7 @@
                     <small>Davomiyligi: 3:00 min</small>
                 </div>
             </div>
-            <div class="about__content">
+            <div class="about__content" data-aos="zoom-in-up" data-aos-duration="1000">
                 <h1 class="section-title">Biz haqimizda</h1>
                 <p class="section-subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
@@ -147,8 +149,9 @@
                 <form class="about__form">
                     <h4 class="about__form-title">Bepul konsultatsiyadan o'ting</h4>
                     <label class="about__form-label" for="about-tel">Telefon raqami</label>
-                    <input class="about__form-input input" required type="text" id="about-tel" placeholder="+998 00 000 00 00"
-                        data-tel pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
+                    <input class="about__form-input input" required type="text" id="about-tel"
+                        placeholder="+998 00 000 00 00" data-tel
+                        pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
                     <button class="btn" type="button">Yuborish</button>
                 </form>
             </div>
@@ -172,85 +175,85 @@
             </div>
             <div class="gallery__body">
                 <div class="gallery__tabs-content active">
-                    <a data-fancybox="gallery1" href="./img/mebel1.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel1.png" alt="mebel1">
+                    <a data-fancybox="gallery1" href="./img/assortiment/yotoqxona1.png" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/yotoqxona1.png" alt="mebel1">
                         <span>Yotoqxona uchun mebel</span>
                     </a>
-                    <a data-fancybox="gallery1" href="./img/mebel2.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel2.png" alt="mebel2">
+                    <a data-fancybox="gallery1" href="./img/assortiment/mehmonxona1.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/mehmonxona1.jpg" alt="mebel2">
                         <span>Mexmonxona uchun mebel</span>
                     </a>
-                    <a data-fancybox="gallery1" href="./img/mebel3.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel3.png" alt="mebel3">
+                    <a data-fancybox="gallery1" href="./img/assortiment/yotoqxona2.png" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/yotoqxona2.png" alt="mebel3">
                         <span>Yotoqxona uchun mebel</span>
                     </a>
-                    <a data-fancybox="gallery1" href="./img/mebel4.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel4.png" alt="mebel4">
+                    <a data-fancybox="gallery1" href="./img/assortiment/yoshbx1.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/yoshbx1.jpg" alt="mebel4">
+                        <span>Yosh bolalar xonasi uchun mebel</span>
+                    </a>
+                    <a data-fancybox="gallery1" href="./img/assortiment/oshxona1.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/oshxona1.jpg" alt="mebel5">
+                        <span>Oshxona uchun mebel</span>
+                    </a>
+                    <a data-fancybox="gallery1" href="./img/assortiment/ofis1.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/ofis1.jpg" alt="mebel6">
+                        <span>Ofis uchun mebel</span>
+                    </a>
+                    <a data-fancybox="gallery1" href="./img/assortiment/mehmonxona2.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/mehmonxona2.jpg" alt="mebel7">
                         <span>Mexmonxona uchun mebel</span>
                     </a>
-                    <a data-fancybox="gallery1" href="./img/mebel5.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel5.png" alt="mebel5">
-                        <span>Yotoqxona uchun mebel</span>
+                </div>
+                <div class="gallery__tabs-content">
+                    <a data-fancybox="gallery1-1" href="./img/assortiment/mehmonxona1.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/mehmonxona1.jpg" alt="mebel1-1">
                     </a>
-                    <a data-fancybox="gallery1" href="./img/mebel6.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel6.png" alt="mebel6">
-                        <span>Mexmonxona uchun mebel</span>
+                    <a data-fancybox="gallery1-1" href="./img/assortiment/mehmonxona2.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/mehmonxona2.jpg" alt="mebel1-2">
                     </a>
-                    <a data-fancybox="gallery1" href="./img/mebel7.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel7.png" alt="mebel7">
-                        <span>Mexmonxona uchun mebel</span>
+                    <a data-fancybox="gallery1-1" href="./img/assortiment/mehmonxona3.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/mehmonxona3.jpg" alt="mebel1-3">
+                    </a>
+                    <a data-fancybox="gallery1-1" href="./img/assortiment/mehmonxona4.png" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/mehmonxona4.png" alt="mebel1-4">
                     </a>
                 </div>
                 <div class="gallery__tabs-content">
-                    <a data-fancybox="gallery1-1" href="./img/mebel1.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel1.png" alt="mebel1">
+                    <a data-fancybox="gallery1-2" href="./img/assortiment/ofis1.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/ofis1.jpg" alt="mebel2-1">
                     </a>
-                    <a data-fancybox="gallery1-1" href="./img/mebel2.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel2.png" alt="mebel2">
+                    <a data-fancybox="gallery1-2" href="./img/assortiment/ofis2.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/ofis2.jpg" alt="mebel2-2">
                     </a>
-                    <a data-fancybox="gallery1-1" href="./img/mebel3.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel3.png" alt="mebel3">
-                    </a>
-                    <a data-fancybox="gallery1-1" href="./img/mebel6.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel6.png" alt="mebel6">
+                    <a data-fancybox="gallery1-2" href="./img/assortiment/ofis3.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/ofis3.jpg" alt="mebel2-3">
                     </a>
                 </div>
                 <div class="gallery__tabs-content">
-                    <a data-fancybox="gallery1-2" href="./img/mebel2.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel2.png" alt="mebel2">
+                    <a data-fancybox="gallery1-3" href="./img/assortiment/oshxona1.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/oshxona1.jpg" alt="mebel3-1">
                     </a>
-                    <a data-fancybox="gallery1-2" href="./img/mebel3.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel3.png" alt="mebel3">
-                    </a>
-                    <a data-fancybox="gallery1-2" href="./img/mebel7.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel7.png" alt="mebel7">
-                    </a>
-                    <a data-fancybox="gallery1-2" href="./img/mebel4.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel4.png" alt="mebel4">
+                    <a data-fancybox="gallery1-3" href="./img/assortiment/oshxona2.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/oshxona2.jpg" alt="mebel3-2">
                     </a>
                 </div>
                 <div class="gallery__tabs-content">
-                    <a data-fancybox="gallery1-3" href="./img/mebel3.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel3.png" alt="mebel3">
+                    <a data-fancybox="gallery1-4" href="./img/assortiment/yotoqxona1.png" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/yotoqxona1.png" alt="mebel4-1">
                     </a>
-                    <a data-fancybox="gallery1-3" href="./img/mebel5.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel5.png" alt="mebel5">
+                    <a data-fancybox="gallery1-4" href="./img/assortiment/yotoqxona2.png" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/yotoqxona2.png" alt="mebel4-2">
                     </a>
-                </div>
-                <div class="gallery__tabs-content">
-                    <a data-fancybox="gallery1-4" href="./img/mebel6.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel6.png" alt="mebel6">
-                    </a>
-                    <a data-fancybox="gallery1-4" href="./img/mebel4.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel4.png" alt="mebel4">
+                    <a data-fancybox="gallery1-4" href="./img/assortiment/yotoqxona3.png" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/yotoqxona3.png" alt="mebel4-3">
                     </a>
                 </div>
                 <div class="gallery__tabs-content">
-                    <a data-fancybox="gallery1-5" href="./img/mebel5.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel5.png" alt="mebel5">
+                    <a data-fancybox="gallery1-5" href="./img/assortiment/yoshbx1.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/yoshbx1.jpg" alt="mebel5-1">
                     </a>
-                    <a data-fancybox="gallery1-5" href="./img/mebel6.png" class="gallery__tabs-imgBx">
-                        <img src="./img/mebel6.png" alt="mebel6">
+                    <a data-fancybox="gallery1-5" href="./img/assortiment/yoshbx2.jpg" class="gallery__tabs-imgBx">
+                        <img src="./img/assortiment/yoshbx2.jpg" alt="mebel5-2">
                     </a>
                 </div>
             </div>
@@ -266,7 +269,7 @@
     <!-- order -->
     <section class="about order">
         <div class="container">
-            <div class="about__content">
+            <div class="about__content" data-aos="fade-down" data-aos-duration="1000">
                 <h1 class="section-title">Aynan qandaydur o'lcham bo'yicha istalgan mebelingizni yasattirmoqchimsiz?
                 </h1>
                 <p class="section-subtitle">Bizning mutaxassislar sizga <span>BEPUL</span> siz xoxlagan olchamda va
@@ -277,12 +280,13 @@
                     <label class="about__form-label" for="order-name">Ism</label>
                     <input class="about__form-input input" required type="text" id="order-name" placeholder="Faxriyor">
                     <label class="about__form-label" for="order-tel">Telefon raqami</label>
-                    <input class="about__form-input input" required type="text" id="order-tel" placeholder="+998 00 000 00 00"
-                        data-tel pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
+                    <input class="about__form-input input" required type="text" id="order-tel"
+                        placeholder="+998 00 000 00 00" data-tel
+                        pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
                     <button type="submit" class="btn">Yuborish</button>
                 </form>
             </div>
-            <div class="order__picture">
+            <div class="order__picture" data-aos="fade-up" data-aos-duration="1000">
                 <img src="./img/size-img.png" alt="order-img">
                 <div class="order__picture-line"></div>
             </div>
@@ -299,9 +303,9 @@
     <section class="choise">
         <div class="container">
             <div class="header__advantages">
-                <div class="header__advantages-item">
+                <div class="header__advantages-item" data-aos="flip-left" data-aos-duration="1200">
                     <div class="header__advantages-icon">
-                        <img src="./img/icon4.png" alt="icon4">
+                        <img src="./img/icons/icon4.png" alt="icon4">
                     </div>
                     <div class="header__advantages-content">
                         <h3 class="header__advantages-title">Muddatga amal qilish</h3>
@@ -309,27 +313,27 @@
                             bilamiz!</p>
                     </div>
                 </div>
-                <div class="header__advantages-item">
+                <div class="header__advantages-item" data-aos="flip-right" data-aos-duration="1200">
                     <div class="header__advantages-icon">
-                        <img src="./img/icon5.png" alt="icon5">
+                        <img src="./img/icons/icon5.png" alt="icon5">
                     </div>
                     <div class="header__advantages-content">
                         <h3 class="header__advantages-title">Sifatli materiallardan foydalanish</h3>
                         <p class="header__advantages-subtitle">Bizga miqdordan ko'ra, sifat muhimroqdir!</p>
                     </div>
                 </div>
-                <div class="header__advantages-item">
+                <div class="header__advantages-item" data-aos="flip-left" data-aos-duration="1200">
                     <div class="header__advantages-icon">
-                        <img src="./img/icon6.png" alt="icon6">
+                        <img src="./img/icons/icon6.png" alt="icon6">
                     </div>
                     <div class="header__advantages-content">
                         <h3 class="header__advantages-title">Mijozga o'zgacha yondashuv</h3>
                         <p class="header__advantages-subtitle">Biz doimo har bir mijozga o'zgacha yondashamiz!</p>
                     </div>
                 </div>
-                <div class="header__advantages-item">
+                <div class="header__advantages-item" data-aos="flip-right" data-aos-duration="1200">
                     <div class="header__advantages-icon">
-                        <img src="./img/icon7.png" alt="icon7">
+                        <img src="./img/icons/icon7.png" alt="icon7">
                     </div>
                     <div class="header__advantages-content">
                         <h3 class="header__advantages-title">Mebelni professional darajada yeg'ish</h3>
@@ -346,34 +350,34 @@
     <section class="works">
         <div class="container">
             <div class="works__gallery">
-                <a data-fancybox="gallery2" href="./img/work1.png" class="works__item">
-                    <img src="./img/work1.png" alt="work1">
+                <a data-fancybox="gallery2" href="./img/works/work1.png" class="works__item">
+                    <img src="./img/works/work1.png" alt="work1">
                 </a>
-                <a data-fancybox="gallery2" href="./img/work2.png" class="works__item">
-                    <img src="./img/work2.png" alt="work2">
+                <a data-fancybox="gallery2" href="./img/works/work2.png" class="works__item">
+                    <img src="./img/works/work2.png" alt="work2">
                 </a>
-                <a data-fancybox="gallery2" href="./img/work3.png" class="works__item">
-                    <img src="./img/work3.png" alt="work3">
+                <a data-fancybox="gallery2" href="./img/works/work3.png" class="works__item">
+                    <img src="./img/works/work3.png" alt="work3">
                 </a>
-                <a data-fancybox="gallery2" href="./img/work4.png" class="works__item">
-                    <img src="./img/work4.png" alt="work4">
+                <a data-fancybox="gallery2" href="./img/works/work4.png" class="works__item">
+                    <img src="./img/works/work4.png" alt="work4">
                 </a>
-                <a data-fancybox="gallery2" href="./img/work5.png" class="works__item">
-                    <img src="./img/work5.png" alt="work5">
+                <a data-fancybox="gallery2" href="./img/works/work5.png" class="works__item">
+                    <img src="./img/works/work5.png" alt="work5">
                 </a>
                 <div class="works__item works__download">
                     <h1 class="section-title">Biz qilgan ishlar</h1>
                     <p class="section-subtitle">Narxlar katalogini yuklab oling!</p>
                     <button type="button" class="btn">Yuklab olish</button>
                 </div>
-                <a data-fancybox="gallery2" href="./img/work6.png" class="works__item">
-                    <img src="./img/work6.png" alt="work6">
+                <a data-fancybox="gallery2" href="./img/works/work6.png" class="works__item">
+                    <img src="./img/works/work6.png" alt="work6">
                 </a>
-                <a data-fancybox="gallery2" href="./img/work7.png" class="works__item">
-                    <img src="./img/work7.png" alt="work7">
+                <a data-fancybox="gallery2" href="./img/works/work7.png" class="works__item">
+                    <img src="./img/works/work7.png" alt="work7">
                 </a>
-                <a data-fancybox="gallery2" href="./img/work8.png" class="works__item">
-                    <img src="./img/work8.png" alt="work8">
+                <a data-fancybox="gallery2" href="./img/works/work8.png" class="works__item">
+                    <img src="./img/works/work8.png" alt="work8">
                 </a>
             </div>
         </div>
@@ -489,12 +493,13 @@
                 <div class="testimonials__form-item">
                     <label class="testimonials__form-label" for="testimonials-name">Ism</label>
                     <input class="testimonials__form-input input" type="text" id="testimonials-name"
-                        placeholder="Faxriyor">
+                        placeholder="Faxriyor" required>
                 </div>
                 <div class="testimonials__form-item">
                     <label class="testimonials__form-label" for="testimonials-tel">Telefon raqami</label>
                     <input class="testimonials__form-input input" type="text" id="testimonials-tel"
-                        placeholder="+998 00 000 00 00" data-tel pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
+                        placeholder="+998 00 000 00 00" data-tel
+                        pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
                 </div>
                 <div class="testimonials__form-item">
                     <button type="submit" class="btn">Yuborish</button>
@@ -512,16 +517,16 @@
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="./img/brend1.png" alt="brend1">
+                            <img src="./img/brends/brend1.png" alt="brend1">
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/brend2.png" alt="brend2">
+                            <img src="./img/brends/brend2.png" alt="brend2">
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/brend3.png" alt="brend3">
+                            <img src="./img/brends/brend3.png" alt="brend3">
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/brend4.png" alt="brend4">
+                            <img src="./img/brends/brend4.png" alt="brend4">
                         </div>
                     </div>
                 </div>
@@ -530,7 +535,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="brends__content">
+            <div class="brends__content" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="section-title">Savolingiz qoldimi?</h2>
                 <p class="section-subtitle">Savolingiz bo'lsa bizga murojat qiling! Biz har qanday savolga javob
                     topamiz!</p>
@@ -538,12 +543,13 @@
                     <label class="about__form-label" for="brends-name">Ism</label>
                     <input class="about__form-input input" required type="text" id="brends-name" placeholder="Faxriyor">
                     <label class="about__form-label" for="brends-tel">Telefon raqami</label>
-                    <input class="about__form-input input" required type="text" id="brends-tel" placeholder="+998 00 000 00 00"
-                        data-tel pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
+                    <input class="about__form-input input" required type="text" id="brends-tel"
+                        placeholder="+998 00 000 00 00" data-tel
+                        pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
                     <button class="btn" type="submit">Yuborish</button>
                 </form>
             </div>
-            <div class="brends__map">
+            <div class="brends__map" data-aos="fade-down" data-aos-duration="1000">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.7915826707178!2d71.78212945306835!3d40.38300604774719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb83a4e74c1d51%3A0x74f191ca540db19!2siTeach%20Academy!5e0!3m2!1sru!2s!4v1651296524616!5m2!1sru!2s"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -589,21 +595,22 @@
 
     <!-- modal -->
     <div class="modal">
-        <!-- <div class="modal__box"> -->
         <h2 class="modal__title">Buyurtma berish</h2>
         <form class="brends__form">
             <label class="about__form-label" for="modal-name">Ismingiz</label>
             <input class="about__form-input input" required type="text" id="modal-name" placeholder="Faxriyor">
             <label class="about__form-label" for="modal-tel">Telefon raqamingiz</label>
-            <input class="about__form-input input" required type="text" id="modal-tel" placeholder="+998 00 000 00 00" data-tel pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
+            <input class="about__form-input input" required type="text" id="modal-tel" placeholder="+998 00 000 00 00"
+                data-tel pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
             <button class="btn" type="submit">Yuborish</button>
         </form>
-        <!-- </div> -->
     </div>
     <div class="overlay"></div>
 
     <!-- SWIPER JS -->
     <script src="./js/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="./js/aos.js"></script>
     <!-- FANCYBOX JS -->
     <script src="./js/fancybox.umd.js"></script>
     <!-- IMASK JS -->

@@ -108,3 +108,6 @@ inputs.forEach(inp => {
         e.target.setCustomValidity("");
     };
 })
+
+// aos
+AOS.init();
