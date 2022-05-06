@@ -131,6 +131,22 @@ img {
   transform: translate(-50%, -50%) scale(1);
 }
 
+.submitted-msg {
+  color: #0DB709;
+  font-weight: 600;
+  display: flex;
+}
+.submitted-msg .fa-check {
+  background-color: #E5FFE4;
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+
 .navbar {
   padding: 1rem 0;
 }
@@ -850,6 +866,10 @@ img {
   height: 2.2rem;
   border-radius: 50%;
   transition: background-color 0.3s ease-in;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .brends .swiper-button::after {
   font-size: 1rem;
@@ -863,6 +883,9 @@ img {
 }
 .brends .swiper-button-next {
   right: 0;
+}
+.brends__form .btn {
+  margin-bottom: 1rem;
 }
 .brends .container:nth-child(2) {
   margin: 3rem auto;

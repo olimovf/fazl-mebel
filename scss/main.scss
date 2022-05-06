@@ -144,6 +144,23 @@ img {
     }
 }
 
+.submitted-msg {
+    color: #0DB709;
+    font-weight: 600;
+    display: flex;
+
+    .fa-check {
+        background-color: #E5FFE4;
+        border-radius: 50%;
+        width: 1.2rem;
+        height: 1.2rem;
+        display: grid;
+        place-items: center;
+        font-size: .8rem;
+        margin-right: .5rem;
+    }
+}
+
 // ===================== NAVBAR ====================== //
 .navbar {
     padding: 1rem 0;
@@ -1033,6 +1050,10 @@ img {
             height: 2.2rem;
             border-radius: 50%;
             transition: background-color .3s ease-in;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
 
             &::after {
                 font-size: 1rem;
@@ -1051,6 +1072,10 @@ img {
                 right: 0;
             }
         }
+    }
+
+    &__form .btn {
+        margin-bottom: 1rem;
     }
 
     .container:nth-child(2) {

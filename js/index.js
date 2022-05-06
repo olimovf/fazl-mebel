@@ -1,3 +1,6 @@
+// aos
+AOS.init();
+
 // ========== video ===========
 const video = document.querySelector('.about__video video');
 const playBtn = document.querySelector('.play-btn');
@@ -64,17 +67,19 @@ telInputs.forEach(elem => new IMask(elem, maskOptions));
 
 // ========== modal ==========
 const buttons = document.querySelectorAll('button[type="button"]');
-// const modalTitles = [
-//     'Buyurtma berish',
-//     'Bepul konsultatsiya oling!',
-//     'Yuklab olish uchun formani to\'ldiring'
-// ];
+const modalTitles = [
+    'Bepul konsultatsiya oling!',
+    'Yuklab olish uchun formani to\'ldiring',
+    'Yuklab olish uchun formani to\'ldiring'
+];
 
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
+let modalTitle = document.querySelector('.modal__title');
 
-buttons.forEach(btn => {
+buttons.forEach((btn, ind) => {
     btn.addEventListener('click', () => {
+        modalTitle.innerText = modalTitles[ind];
         modal.classList.add('show');
         document.body.style.overflowY = 'hidden';
         overlay.style.display = 'block';
@@ -90,7 +95,7 @@ document.addEventListener('click', e => {
 })
 
 // validation
-const inputs = document.querySelectorAll("INPUT");
+const inputs = document.querySelectorAll("input");
 inputs.forEach(inp => {
     inp.oninvalid = function(e) {
         e.target.setCustomValidity("");
@@ -109,5 +114,27 @@ inputs.forEach(inp => {
     };
 })
 
-// aos
-AOS.init();
+// forms
+const orderForm = document.getElementById('order-form');
+const submittedMsg = `<p class='submitted-msg'><i class="fas fa-check"></i> Muvaffaqiyatli yuborildi! Mutaxassis tez orada siz bilan aloqaga chiqadi</p>`;
+orderForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('order-msg').innerHTML = submittedMsg;
+})
+
+const adviceForm = document.getElementById('advice-form');
+adviceForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!adviceForm.querySelector('.submitted-msg')) {
+        adviceForm.querySelector('.container').insertAdjacentHTML('beforeend', submittedMsg);
+    }
+})
+
+const brendsForm = document.getElementById('brends-form');
+
+brendsForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!brendsForm.querySelector('.submitted-msg')) {
+        brendsForm.insertAdjacentHTML('beforeend', submittedMsg);
+    }
+})

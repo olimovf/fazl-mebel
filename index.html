@@ -90,7 +90,7 @@
                     <img src="./img/header-img.png" alt="header-img">
                 </div>
             </div>
-            <div class="header__advantages">
+            <div class="header__advantages" data-aos="fade-down" data-aos-duration="1000">
                 <div class="header__advantages-item">
                     <div class="header__advantages-icon">
                         <img src="./img/icons/icon1.png" alt="icon1">
@@ -278,7 +278,8 @@
                     <h4 class="about__form-title">Mutaxassis orqali sizga kerakli mebel narxini <span>BEPUL</span>
                         hisoblash uchun telefon raqamingizni qoldiring</h4>
                     <label class="about__form-label" for="order-name">Ism</label>
-                    <input class="about__form-input input" required type="text" id="order-name" placeholder="Faxriyor">
+                    <input class="about__form-input input" required type="text" id="order-name" placeholder="Faxriyor"
+                        title="">
                     <label class="about__form-label" for="order-tel">Telefon raqami</label>
                     <input class="about__form-input input" required type="text" id="order-tel"
                         placeholder="+998 00 000 00 00" data-tel
@@ -290,7 +291,7 @@
                 <img src="./img/size-img.png" alt="order-img">
                 <div class="order__picture-line"></div>
             </div>
-            <div class="gallery__bottom" id="order-msg">
+            <div class="gallery__bottom submitted" id="order-msg">
                 <span>*</span>
                 <p class="gallery__bottom-label">Konsultatsiya olish mutlaqo bepul bo'lib, sizdan hech qanday to'lovni
                     amalga oshirish talab qilinmaydi!</p>
@@ -485,7 +486,7 @@
                 </li>
             </ul>
         </div>
-        <form class="testimonials__form">
+        <form class="testimonials__form" id="advice-form">
             <div class="container">
                 <div class="testimonials__form-item">
                     <p class="testimonials__form-txt">Mebel borasida bepul maslahat olish:</p>
@@ -493,7 +494,7 @@
                 <div class="testimonials__form-item">
                     <label class="testimonials__form-label" for="testimonials-name">Ism</label>
                     <input class="testimonials__form-input input" type="text" id="testimonials-name"
-                        placeholder="Faxriyor" required>
+                        placeholder="Faxriyor" title="" required>
                 </div>
                 <div class="testimonials__form-item">
                     <label class="testimonials__form-label" for="testimonials-tel">Telefon raqami</label>
@@ -539,9 +540,10 @@
                 <h2 class="section-title">Savolingiz qoldimi?</h2>
                 <p class="section-subtitle">Savolingiz bo'lsa bizga murojat qiling! Biz har qanday savolga javob
                     topamiz!</p>
-                <form class="brends__form">
+                <form class="brends__form" id="brends-form">
                     <label class="about__form-label" for="brends-name">Ism</label>
-                    <input class="about__form-input input" required type="text" id="brends-name" placeholder="Faxriyor">
+                    <input class="about__form-input input" required type="text" id="brends-name" placeholder="Faxriyor"
+                        title="">
                     <label class="about__form-label" for="brends-tel">Telefon raqami</label>
                     <input class="about__form-input input" required type="text" id="brends-tel"
                         placeholder="+998 00 000 00 00" data-tel
@@ -598,7 +600,7 @@
         <h2 class="modal__title">Buyurtma berish</h2>
         <form class="brends__form">
             <label class="about__form-label" for="modal-name">Ismingiz</label>
-            <input class="about__form-input input" required type="text" id="modal-name" placeholder="Faxriyor">
+            <input class="about__form-input input" required type="text" id="modal-name" placeholder="Faxriyor" title="">
             <label class="about__form-label" for="modal-tel">Telefon raqamingiz</label>
             <input class="about__form-input input" required type="text" id="modal-tel" placeholder="+998 00 000 00 00"
                 data-tel pattern="\+[0-9]{3} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}" title="">
